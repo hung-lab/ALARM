@@ -13,7 +13,8 @@ The models used to make predictions are based on the following study
 
 > Warkentin MT, Tammemägi MC, Espin-Garcia O, Budhathoki S, Liu G, Hung
 > RJ. Asian Lung Cancer Absolute Risk Models for lung cancer mortality
-> based on China Kadoorie Biobank. medRxiv. 2022 July 01.
+> based on China Kadoorie Biobank. J Natl Cancer Inst. 2022; 114(12):1665-1673
+> doi: 10.1093/jnci/djac176.
 
 ## Installation
 
