@@ -9,7 +9,7 @@ The `{ALARM}` package provides a single primary function,
 based on a set of covariates and a chosen time horizon.
 
 The models used to make predictions are based on the following study
-([link](https://www.medrxiv.org/content/10.1101/2022.04.22.22274185v1)):
+([link](https://academic.oup.com/jnci/article/114/12/1665/6694851)):
 
 > Warkentin MT, Tammemägi MC, Espin-Garcia O, Budhathoki S, Liu G, Hung
 > RJ. Asian Lung Cancer Absolute Risk Models for lung cancer mortality
