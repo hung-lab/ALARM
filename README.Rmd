@@ -13,20 +13,35 @@ options(max.print = 100)
 # ALARM
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/mattwarkentin/ALARM/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mattwarkentin/ALARM/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The `{ALARM}` package provides a single primary function, `predictALARM()` to predict the absolute risk of lung cancer mortality based on a set of covariates and a chosen time horizon.
 
-The models used to make predictions are based on the following study ([link](https://www.medrxiv.org/content/10.1101/2022.04.22.22274185v1)):
+The models used to make predictions are based on the following study ([link](https://doi.org/10.1093/jnci/djac176)):
 
-> Warkentin MT, Tammemägi MC, Espin-Garcia O, Budhathoki S, Liu G, Hung RJ. Asian Lung Cancer Absolute Risk Models for lung cancer mortality based on China Kadoorie Biobank. medRxiv. 2022 July 01.
+> Warkentin MT, Tammemägi MC, Espin-Garcia O, Budhathoki S, Liu G, Hung RJ. Lung Cancer absolute risk models for mortality in an Asian population using the China Kadoorie Biobank. JNCI: Journal of the National Cancer Institute. 2022 Dec 1;114(12):1665-73.
 
 ## Installation
 
-You can install the development version of `ALARM` from GitHub using:
+You can install the development version of `{ALARM}` from GitHub using:
 
 ```{r installation, eval=FALSE}
 remotes::install_github('mattwarkentin/ALARM')
+```
+
+The `{flexsurv}` models that are used in this package to make predictions were fitted using a version of the `{flexsurv}` package that is not compatible with the current release of `{flexsurv}` on CRAN. In order to use `{ALARM}`, you must install a specific version of `{flexsurv}` (version 2.2 or 2.2.1).
+
+You can install one of these versions from CRAN using:
+
+```r
+remotes::install_version("flexsurv", "2.2.1") # or 2.2
+```
+
+Or from GitHub using:
+
+```r
+remotes::install_github("chjackson/flexsurv@v2.2.1") # or 2.2
 ```
 
 ## Usage

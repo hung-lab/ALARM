@@ -1,22 +1,25 @@
 Package: ALARM
 Title: Asian Lung Cancer Absolute Risk Models
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
     person("Matthew T.", "Warkentin", , "matthew.warkentin@ucalgary.ca", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-8730-3511"))
 Description: This package provides a user-friendly API for making
     predictions using the Asian Lung Cancer Absolute Risk Models (ALARM)
-    for lung cancer morality as published in Warkentin et al. (2022).
+    for lung cancer morality as published in Warkentin et al. (2022). 
+    Read more about these models at https://doi.org/10.1093/jnci/djac176.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.0
+RoxygenNote: 7.3.3.9000
 Depends:
     R (>= 3.5.0)
 Imports: 
     dplyr,
-    flexsurv,
+    flexsurv (== 2.2.1),
     magrittr,
     purrr,
     rlang,
     tidyr
+URL: https://github.com/mattwarkentin/ALARM
+BugReports: https://github.com/mattwarkentin/ALARM/issues
