@@ -1,10 +1,12 @@
 #' Asian Lung Cancer Absolute Risk Models (ALARM)
 #'
+#' @description
 #' These functions return ALARM model objects that can be used to make
 #'   predictions of the *t*-year absolute risk of lung cancer mortality. These
-#'   functions are called internally by [`predictALARM()`], if necessary.
+#'   functions are memoised when the package is loaded and they are called
+#'   internally by [`predictALARM()`], if/when necessary.
 #'
-#' @return ALARM model objects (i.e. a `list` with the class `fmsm`).
+#' @return ALARM model objects (i.e., a `list` with the class `fmsm`).
 #'
 #' @md
 #'

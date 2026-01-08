@@ -1,6 +1,6 @@
 Package: ALARM
 Title: Asian Lung Cancer Absolute Risk Models
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: 
     person("Matthew T.", "Warkentin", , "matthew.warkentin@ucalgary.ca", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-8730-3511"))
@@ -13,12 +13,14 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3.9000
 Depends:
-    R (>= 3.5.0)
+    R (>= 4.1.0)
 Imports: 
+    carrier (>= 0.3.0),
     dplyr,
     flexsurv (== 2.2.1),
-    magrittr,
-    purrr,
+    memoise,
+    mirai (>= 2.5.1),
+    purrr (>= 1.2.0),
     rlang,
     tidyr
 Remotes:

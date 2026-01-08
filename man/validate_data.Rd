@@ -17,7 +17,7 @@ validate_data(data)
 \item \code{phx_lungdx} - Personal history of COPD? (0 = No, 1 = Yes)
 \item \code{hhinc} - Annual household income (see \code{Details} section)
 \item \code{bmi} - Body Mass Index (kg/m^2)
-\item \code{smk_status} - Smoking status (1 = Never, 1 = Former, 3 = Current)
+\item \code{smk_status} - Smoking status (1 = Never, 2 = Former, 3 = Current)
 \item \code{smk_duration} - Smoking duration (years)
 \item \code{smk_cigpday} - Smoking intensity (avg. # of cigarettes per day)
 }}
@@ -45,8 +45,8 @@ levels:
 \examples{
 data <- data.frame(age = 70, sex = 1, fhx_cancer = 1,
                    phx_cancer = 0, fev1fvc = 70, phx_lungdx = 1,
-                   hhinc = 3, bmi = 30, 
-                   smk_status = c(1, 2), smk_duration = c(NA, 40), 
+                   hhinc = 3, bmi = 30,
+                   smk_status = c(1, 2), smk_duration = c(NA, 40),
                    smk_cigpday = c(NA, 20))
 validate_data(data)
 

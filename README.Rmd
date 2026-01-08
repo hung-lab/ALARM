@@ -24,7 +24,7 @@ The models used to make predictions are based on the following study ([link](htt
 
 ## Installation
 
-You can install the development version of `{ALARM}` from GitHub using:
+You can install `{ALARM}` from GitHub using:
 
 ```{r installation, eval=FALSE}
 remotes::install_github('mattwarkentin/ALARM')

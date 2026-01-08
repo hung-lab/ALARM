@@ -10,10 +10,11 @@ ALARM_NS()
 ALARM_ES()
 }
 \value{
-ALARM model objects (i.e. a \code{list} with the class \code{fmsm}).
+ALARM model objects (i.e., a \code{list} with the class \code{fmsm}).
 }
 \description{
 These functions return ALARM model objects that can be used to make
 predictions of the \emph{t}-year absolute risk of lung cancer mortality. These
-functions are called internally by \code{\link[=predictALARM]{predictALARM()}}, if necessary.
+functions are memoised when the package is loaded and they are called
+internally by \code{\link[=predictALARM]{predictALARM()}}, if/when necessary.
 }

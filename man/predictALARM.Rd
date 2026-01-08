@@ -4,14 +4,17 @@
 \alias{predictALARM}
 \title{ALARM Predictions}
 \usage{
-predictALARM(data, time = 5, ...)
+predictALARM(data, time = 5, progress = FALSE, ...)
 }
 \arguments{
 \item{data}{Data frame containing covariate values at which to produce
 absolute risk predictions. See \code{\link[=validate_data]{validate_data()}} for information on the
-expected format of the \code{data}.}
+expected format of \code{data}.}
 
-\item{time}{Time horizon at which to make predictions.}
+\item{time}{Numeric. Time horizon (in years) at which to make predictions.
+Default is \code{5}.}
+
+\item{progress}{Logical. Should progress bars be shown? Default is \code{FALSE}.}
 
 \item{...}{Not currently used.}
 }
@@ -25,13 +28,36 @@ cancer mortality at time \code{time}.
 Makes predictions for the absolute risk of lung cancer mortality for
 never and ever smokers, based on a set of covariates, at a chosen time
 horizon.
+
+The models used to make predictions are based on the following study
+(\url{https://doi.org/10.1093/jnci/djac176}):
+
+Warkentin MT, Tammemägi MC, Espin-Garcia O, Budhathoki S, Liu G, Hung RJ.
+Lung Cancer absolute risk models for mortality in an Asian population using
+the China Kadoorie Biobank. JNCI: Journal of the National Cancer Institute.
+2022 Dec 1;114(12):1665-73.
+}
+\details{
+\code{predictALARM()} supports parallel processing using the \code{mirai} package.
+For small numbers of participants, parallel processing may actually be
+slower than sequential processing due to the additional overhead. However,
+for large numbers of participants, parallel processing can provide
+considerable computational efficiency.
+
+For example, to create multiple background R processes capable of
+performing predictions in parallel:
+
+\if{html}{\out{<div class="sourceCode r">}}\preformatted{library(mirai)
+daemons(4) # number of background processes
+predictALARM(data)
+}\if{html}{\out{</div>}}
 }
 \examples{
 
 data <- data.frame(age = 70, sex = 1, fhx_cancer = 1,
                    phx_cancer = 0, fev1fvc = 70, phx_lungdx = 1,
-                   hhinc = 3, bmi = 30, 
-                   smk_status = c(1, 2), smk_duration = c(NA, 40), 
+                   hhinc = 3, bmi = 30,
+                   smk_status = c(1, 2), smk_duration = c(NA, 40),
                    smk_cigpday = c(NA, 20))
 predictALARM(data)
 
